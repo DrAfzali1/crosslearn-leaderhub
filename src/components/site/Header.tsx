@@ -1,0 +1,76 @@
+import { Link } from "@tanstack/react-router";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
+
+const links = [
+  { to: "/framework", label: "Framework" },
+  { to: "/insights", label: "Insights" },
+  { to: "/services", label: "Services" },
+  { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
+] as const;
+
+export function Header() {
+  const [open, setOpen] = useState(false);
+  return (
+    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+      <div className="container-prose flex h-16 items-center justify-between">
+        <Link to="/" className="flex items-center gap-3" aria-label="Integrated Clinical Executive home">
+          <img src={logo} alt="" className="h-9 w-auto" width={36} height={36} />
+          <span className="hidden font-serif text-lg tracking-tight text-primary sm:inline">
+            Integrated Clinical Executive
+          </span>
+        </Link>
+        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+          {links.map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+              activeProps={{ className: "text-primary" }}
+            >
+              {l.label}
+            </Link>
+          ))}
+          <Link
+            to="/subscribe"
+            className="inline-flex h-9 items-center justify-center rounded-sm bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Subscribe
+          </Link>
+        </nav>
+        <button
+          className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-sm border border-border text-foreground"
+          onClick={() => setOpen((o) => !o)}
+          aria-label="Toggle menu"
+          aria-expanded={open}
+        >
+          {open ? <X size={18} /> : <Menu size={18} />}
+        </button>
+      </div>
+      {open && (
+        <nav className="container-prose md:hidden pb-4 space-y-2" aria-label="Mobile">
+          {links.map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              onClick={() => setOpen(false)}
+              className="block py-2 text-sm font-medium text-foreground/80"
+              activeProps={{ className: "text-primary" }}
+            >
+              {l.label}
+            </Link>
+          ))}
+          <Link
+            to="/subscribe"
+            onClick={() => setOpen(false)}
+            className="mt-2 inline-flex h-9 items-center justify-center rounded-sm bg-primary px-4 text-sm font-medium text-primary-foreground"
+          >
+            Subscribe
+          </Link>
+        </nav>
+      )}
+    </header>
+  );
+}
