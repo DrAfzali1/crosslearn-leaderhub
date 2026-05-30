@@ -105,7 +105,7 @@ function FrameworkPage() {
       <section className="container-prose py-24 md:py-32">
         <p className="eyebrow">The Framework</p>
         <h1 className="mt-8 max-w-5xl font-serif text-4xl leading-[1.05] tracking-tight text-primary md:text-7xl">
-          The Integrated Clinical Executive<sup>™</sup> Framework.
+          The Integrated Clinical Executive Framework.
         </h1>
         <p className="mt-6 max-w-3xl font-serif text-xl italic text-gold md:text-2xl">
           Redefining physician leadership through integration, not separation.
