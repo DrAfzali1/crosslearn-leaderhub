@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import podcastImg from "@/assets/exec-podcast.jpg";
 
 const TITLE = "Services & Speaking — The Clinical Executives";
 const DESC = "Executive advisory, leadership cohorts, workshops, and keynote speaking on integrated physician leadership and cross-industry operational excellence for healthcare.";
@@ -47,6 +48,16 @@ function ServicesPage() {
               <p className="mt-4 text-muted-foreground">{s.b}</p>
             </article>
           ))}
+          <figure className="bg-background">
+            <img
+              src={podcastImg}
+              alt="Polished podcast studio with microphone on a wood desk"
+              loading="lazy"
+              width={1280}
+              height={1280}
+              className="h-full w-full object-cover"
+            />
+          </figure>
         </div>
         <div className="mt-16 flex flex-wrap gap-3">
           <Link to="/contact" className="inline-flex h-11 items-center justify-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground hover:bg-primary/90">
