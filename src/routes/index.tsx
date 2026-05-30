@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { NewsletterForm } from "@/components/site/NewsletterForm";
-import boardroomImg from "@/assets/exec-boardroom.jpg";
 import atriumImg from "@/assets/exec-atrium.jpg";
+import logoFull from "@/assets/logo-full.png";
 
 const TITLE = "The Clinical Executives — Strategy & Leadership";
 const DESC =
@@ -60,16 +60,14 @@ function Home() {
               </Link>
             </div>
           </div>
-          <figure className="md:col-span-5">
-            <div className="overflow-hidden rounded-sm border border-border/60 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)]">
-              <img
-                src={boardroomImg}
-                alt="Quiet executive boardroom at dusk overlooking a city skyline"
-                width={1600}
-                height={1100}
-                className="h-full w-full object-cover grayscale-[15%]"
-              />
-            </div>
+          <figure className="md:col-span-5 flex items-center justify-center">
+            <img
+              src={logoFull}
+              alt="The Clinical Executives — Strategy & Leadership"
+              width={1240}
+              height={1240}
+              className="h-auto w-full max-w-md object-contain"
+            />
           </figure>
         </div>
       </section>
