@@ -51,14 +51,14 @@ function AboutPage() {
 
       {/* Founder */}
       <section className="border-y border-border bg-secondary/30">
-        <div className="container-prose grid gap-12 py-20 md:grid-cols-12">
-          <div className="md:col-span-4">
+        <div className="container-prose grid items-stretch gap-12 py-20 md:grid-cols-12">
+          <div className="flex flex-col md:col-span-4">
             <p className="eyebrow">Founder</p>
             <h2 className="mt-4 font-serif text-3xl leading-tight text-primary md:text-4xl">
               Anita Afzali, MD, MPH, MHCM
             </h2>
             <span className="rule-gold my-6" />
-            <figure className="mt-8 overflow-hidden rounded-sm border border-border/60 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)]">
+            <figure className="mt-8 flex-1 overflow-hidden rounded-sm border border-border/60 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)]">
               <img
                 src={deskImg}
                 alt="Executive hands resting on a leather portfolio with a fountain pen"
