@@ -81,10 +81,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Integrated Clinical Executive" },
-      { name: "description", content: "A resource and platform for clinical executives and healthcare leaders learning across disciplines." },
+      { title: "The Clinical Executives — Strategy & Leadership" },
+      { name: "description", content: "A physician-led leadership platform advancing integrated physician executive leadership across clinical care, strategy, academic medicine, and cross-industry operational excellence." },
       { name: "theme-color", content: "#1a2a4a" },
-      { property: "og:site_name", content: "Integrated Clinical Executive" },
+      { property: "og:site_name", content: "The Clinical Executives" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -106,9 +106,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Integrated Clinical Executive",
+          name: "The Clinical Executives",
+          alternateName: "The Clinical Executives: Strategy & Leadership",
           description:
-            "A resource and platform for clinical executives and healthcare leaders learning across disciplines.",
+            "A physician-led leadership platform advancing the integrated physician executive — uniting clinical excellence, executive strategy, academic medicine, and cross-industry operational learning.",
+          founder: {
+            "@type": "Person",
+            name: "Anita Afzali",
+            honorificSuffix: "MD, MPH, MHCM",
+          },
         }),
       },
     ],
