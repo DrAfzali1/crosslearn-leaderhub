@@ -1,13 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import { NewsletterForm } from "./NewsletterForm";
+import logoMark from "@/assets/logo-mark.png";
 
 export function Footer() {
   return (
     <footer className="mt-24 border-t border-border bg-secondary/40">
       <div className="container-prose grid gap-12 py-16 md:grid-cols-3">
         <div>
-          <p className="eyebrow">The Clinical Executives</p>
-          <h3 className="mt-3 font-serif text-2xl text-primary">
+          <div className="flex items-center gap-3">
+            <img src={logoMark} alt="" width={40} height={40} className="h-10 w-10 object-contain" />
+            <p className="eyebrow !mt-0">The Clinical Executives</p>
+          </div>
+          <h3 className="mt-4 font-serif text-2xl text-primary">
             Physicians should not have to choose between providing healthcare and leading healthcare.
           </h3>
           <p className="mt-3 text-sm text-muted-foreground">
