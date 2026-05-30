@@ -22,6 +22,7 @@ const services = [
   { t: "Leadership Cohorts & Community", b: "Curated cohorts for physician executives working through the Integrated Clinical Executive™ Framework together — building the identity, domain, execution, and adaptive systems capabilities required to lead modern healthcare." },
   { t: "Workshops & Strategic Retreats", b: "On-site sessions for leadership teams. Cross-industry frameworks from aviation, Toyota, hospitality, technology, and pharma — translated into the operational realities of your organization." },
   { t: "Keynote Speaking", b: "Talks for health system summits, association meetings, academic medical centers, and boards — on integrated physician leadership, reclaiming academic medicine, and cross-industry operational excellence." },
+  { t: "Podcasts", b: "Video and audio podcast interviews with leaders across different industries for shared learning and content — exploring the intersections of healthcare leadership, operational excellence, and cross-industry innovation." },
 ];
 
 function ServicesPage() {
@@ -34,7 +35,7 @@ function ServicesPage() {
         </h1>
         <span className="rule-gold my-10" />
         <p className="max-w-3xl text-lg text-muted-foreground">
-          Four ways to engage The Clinical Executives — designed to help healthcare organizations strengthen leadership, operational performance, and care delivery models, with the ultimate goal of improving outcomes and experiences for patients, clinicians, and communities.
+          Engage The Clinical Executives — designed to help healthcare organizations strengthen leadership, operational performance, and care delivery models, with the ultimate goal of improving outcomes and experiences for patients, clinicians, and communities.
         </p>
       </section>
       <section className="container-prose pb-24">
