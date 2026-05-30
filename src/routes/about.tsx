@@ -76,27 +76,19 @@ function AboutPage() {
             <p>
               Informed by active experience leading within a major academic medical center, the platform bridges clinical credibility with operational excellence — integrating lessons from healthcare, aviation, the Toyota production system, athletics, hospitality, technology, and the pharmaceutical industry to advance sustainable, high-performing care delivery models.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Reframing the problem */}
-      <section className="container-prose py-24">
-        <div className="grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-5">
-            <p className="eyebrow">Reframing the Problem</p>
-            <h2 className="mt-6 font-serif text-3xl leading-tight text-primary md:text-5xl">
-              We have lost the integrated physician.
-            </h2>
-            <span className="rule-gold my-6" />
-          </div>
-          <div className="space-y-6 text-muted-foreground md:col-span-7">
-            <p className="text-lg">
-              The traditional model of academic medicine — where physicians simultaneously advanced patient care, education, research, and discovery — has eroded under modern pressures of productivity, silos, and administrative complexity.
-            </p>
-            <p>
-              This is not simply a leadership gap. It is a <em className="text-foreground/90 not-italic">structural and philosophical gap</em>. Healthcare has created a generation of leaders who are either clinically excellent but not empowered to lead systems, or administratively positioned but distanced from clinical realities.
-            </p>
+            <div className="pt-6">
+              <p className="eyebrow">Reframing the Problem</p>
+              <h2 className="mt-4 font-serif text-2xl leading-tight text-primary md:text-3xl">
+                We have lost the integrated physician.
+              </h2>
+              <span className="rule-gold my-5" />
+              <p className="text-lg">
+                The traditional model of academic medicine — where physicians simultaneously advanced patient care, education, research, and discovery — has eroded under modern pressures of productivity, silos, and administrative complexity.
+              </p>
+              <p className="mt-4">
+                This is not simply a leadership gap. It is a <em className="text-foreground/90 not-italic">structural and philosophical gap</em>. Healthcare has created a generation of leaders who are either clinically excellent but not empowered to lead systems, or administratively positioned but distanced from clinical realities.
+              </p>
+            </div>
           </div>
         </div>
       </section>
