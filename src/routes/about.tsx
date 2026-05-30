@@ -69,7 +69,7 @@ function AboutPage() {
               />
             </figure>
           </div>
-          <div className="space-y-5 text-muted-foreground md:col-span-8">
+          <div className="space-y-5 pt-8 text-muted-foreground md:col-span-8 md:pt-24">
             <p className="text-lg">
               A physician executive, operational strategist, academic leader, entrepreneur, and global healthcare leader, Dr. Afzali delivers high-level insights grounded in real-time leadership across complex health systems, clinical operations, enterprise strategy, academic medicine, and healthcare transformation.
             </p>
