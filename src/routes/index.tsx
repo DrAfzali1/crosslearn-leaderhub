@@ -41,7 +41,7 @@ function Home() {
     <>
       {/* Hero — premise */}
       <section className="container-prose py-24 md:py-32">
-        <div className="grid gap-12 md:grid-cols-12 md:items-center">
+        <div className="grid gap-12 md:grid-cols-12 md:items-start">
           <div className="md:col-span-7">
             <p className="eyebrow">The Clinical Executives™ · Strategy &amp; Leadership</p>
             <h1 className="mt-8 font-serif text-4xl leading-[1.05] tracking-tight text-primary md:text-6xl">
