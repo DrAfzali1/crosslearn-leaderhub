@@ -4,8 +4,8 @@ import { useServerFn } from "@tanstack/react-start";
 import { submitContactMessage } from "@/lib/contact.functions";
 import { toast } from "sonner";
 
-const TITLE = "Contact — Integrated Clinical Executive";
-const DESC = "Get in touch about advisory, speaking, or cohort enrollment.";
+const TITLE = "Contact — The Clinical Executives";
+const DESC = "Get in touch about executive advisory, keynote speaking, leadership cohorts, or strategic engagements with The Clinical Executives.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -49,14 +49,14 @@ function ContactPage() {
   }
 
   return (
-    <section className="container-prose max-w-3xl py-20 md:py-28">
+    <section className="container-prose max-w-3xl py-24 md:py-32">
       <p className="eyebrow">Contact</p>
-      <h1 className="mt-6 font-serif text-4xl leading-tight text-primary md:text-5xl">
+      <h1 className="mt-8 font-serif text-4xl leading-tight text-primary md:text-6xl">
         Let's talk.
       </h1>
-      <span className="rule-gold my-8" />
+      <span className="rule-gold my-10" />
       <p className="max-w-2xl text-lg text-muted-foreground">
-        Whether you're exploring advisory work, planning an event, or considering a cohort — tell us what you're working on.
+        Whether you're exploring an executive advisory engagement, planning a keynote, or considering a leadership cohort — share what your organization is working on.
       </p>
       <form onSubmit={onSubmit} className="mt-12 grid gap-5">
         <div className="grid gap-5 md:grid-cols-2">
