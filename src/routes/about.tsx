@@ -73,7 +73,7 @@ function AboutPage() {
             <p className="text-lg">
               A physician executive, operational strategist, academic leader, entrepreneur, and global healthcare leader, Dr. Afzali delivers high-level insights grounded in real-time leadership across complex health systems, clinical operations, enterprise strategy, academic medicine, and healthcare transformation.
             </p>
-            <p>
+            <p className="text-lg">
               Informed by active experience leading within a major academic medical center, the platform bridges clinical credibility with operational excellence — integrating lessons from healthcare, aviation, the Toyota production system, athletics, hospitality, technology, and the pharmaceutical industry to advance sustainable, high-performing care delivery models.
             </p>
             <div className="pt-6">
@@ -85,7 +85,7 @@ function AboutPage() {
               <p className="text-lg">
                 The traditional model of academic medicine — where physicians simultaneously advanced patient care, education, research, and discovery — has eroded under modern pressures of productivity, silos, and administrative complexity.
               </p>
-              <p className="mt-4">
+              <p className="mt-4 text-lg">
                 This is not simply a leadership gap. It is a <em className="text-foreground/90 not-italic">structural and philosophical gap</em>. Healthcare has created a generation of leaders who are either clinically excellent but not empowered to lead systems, or administratively positioned but distanced from clinical realities.
               </p>
             </div>
@@ -108,11 +108,11 @@ function AboutPage() {
               <article key={s.t} className="bg-background p-8 md:p-10">
                 <p className="eyebrow">{String(i + 1).padStart(2, "0")}</p>
                 <h3 className="mt-3 font-serif text-2xl text-primary">{s.t}</h3>
-                <p className="mt-3 text-muted-foreground">{s.b}</p>
+                <p className="mt-3 text-lg text-muted-foreground">{s.b}</p>
               </article>
             ))}
           </div>
-          <p className="mt-10 max-w-3xl text-sm italic text-muted-foreground">
+          <p className="mt-10 max-w-3xl text-lg italic text-muted-foreground">
             The objective is not to corporatize medicine, but to strengthen healthcare delivery through disciplined operational thinking while preserving clinical integrity, physician leadership, and patient-centered care.
           </p>
         </div>
@@ -130,7 +130,7 @@ function AboutPage() {
             <li key={d.t} className="grid gap-6 py-7 md:grid-cols-12 md:items-baseline">
               <p className="eyebrow md:col-span-2">{String(i + 1).padStart(2, "0")}</p>
               <h3 className="font-serif text-xl text-primary md:col-span-4 md:text-2xl">{d.t}</h3>
-              <p className="text-muted-foreground md:col-span-6">{d.b}</p>
+              <p className="text-lg text-muted-foreground md:col-span-6">{d.b}</p>
             </li>
           ))}
         </ol>
