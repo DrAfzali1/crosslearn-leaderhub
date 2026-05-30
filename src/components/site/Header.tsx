@@ -16,7 +16,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
       <div className="container-prose flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-0.5" aria-label="The Clinical Executives — home">
+        <Link to="/" className="flex items-end gap-0.5" aria-label="The Clinical Executives — home">
           <img src={logoMark} alt="" width={36} height={36} className="h-9 w-9 object-contain -mr-1" />
           <span className="flex items-baseline gap-2 leading-none">
             <span className="font-serif text-lg tracking-tight text-primary sm:text-xl leading-none">
