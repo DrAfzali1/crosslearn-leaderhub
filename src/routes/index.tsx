@@ -1,12 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import hero from "@/assets/hero.jpg";
-import framework from "@/assets/framework.jpg";
 import { NewsletterForm } from "@/components/site/NewsletterForm";
 
-const TITLE = "Integrated Clinical Executive — Leadership for Healthcare";
+const TITLE = "The Clinical Executives — Strategy & Leadership";
 const DESC =
-  "A resource and platform for clinical executives, physician leaders, and healthcare administrators learning across industries to lead with clarity.";
+  "A physician-led leadership platform advancing the integrated physician executive — uniting clinical excellence, executive strategy, academic medicine, and cross-industry operational learning.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,97 +20,137 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const pillars = [
-  { eyebrow: "01 — Clinical", title: "Patient-centered judgment", body: "Operational decisions anchored in clinical reality — not abstracted away from it." },
-  { eyebrow: "02 — Strategic", title: "Cross-industry pattern recognition", body: "Borrow what works from aviation, finance, defense, design, and the arts." },
-  { eyebrow: "03 — Human", title: "Adaptive leadership", body: "Lead complex teams through ambiguity with empathy, rigor, and courage." },
-  { eyebrow: "04 — Systemic", title: "Whole-system thinking", body: "See the interactions, not just the parts. Design for emergent outcomes." },
+const integrations = [
+  { n: "01", t: "Identity Integration", s: "Role Conflict → Role Alignment", b: "A unified identity — clinician, executive, and academic — trusted by clinicians and effective in the boardroom." },
+  { n: "02", t: "Domain Integration", s: "Silos → System Thinking", b: "Reintegrating care, education, research, and operations so leaders can connect strategy to bedside impact." },
+  { n: "03", t: "Execution Integration", s: "Strategy → Operational Reality", b: "Translating vision into workflows, alignment, and measurable outcomes that improve lives and communities." },
+  { n: "04", t: "Adaptive Systems Integration", s: "Healthcare ↔ Cross-Industry Learning", b: "Applying proven frameworks from aviation, Toyota, hospitality, technology, pharma, and athletics to healthcare." },
+];
+
+const drivers = [
+  "Financial pressures and value-based care models",
+  "Workforce challenges and physician burnout",
+  "Increasing complexity of clinical operations and care delivery",
+  "Rapid integration of digital health and innovation",
 ];
 
 function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="container-prose grid items-center gap-12 py-20 md:grid-cols-2 md:py-28">
-        <div>
-          <p className="eyebrow">For clinical executives & healthcare leaders</p>
-          <h1 className="mt-6 font-serif text-4xl leading-[1.05] tracking-tight text-primary md:text-6xl">
-            Lead healthcare with ideas borrowed from every industry.
-          </h1>
-          <span className="rule-gold my-8" />
-          <p className="max-w-prose text-lg text-muted-foreground">
-            A resource and learning platform for physician executives, administrators, and clinical leaders who refuse to look only inward. Cross-disciplinary frameworks for the hardest decisions in modern medicine.
-          </p>
-          <div className="mt-10 max-w-md">
-            <NewsletterForm source="home-hero" />
-            <p className="mt-3 text-xs text-muted-foreground">
-              Monthly essay. One idea. No noise.
-            </p>
-          </div>
-          <div className="mt-6">
-            <Link to="/framework" className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-gold">
-              Explore the framework <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-        <div className="relative">
-          <div className="absolute -left-4 -top-4 h-full w-full border border-gold/40" aria-hidden />
-          <img src={hero} alt="A modern executive desk with notebook and olive branch" width={1600} height={1100} className="relative aspect-[4/3] w-full object-cover" />
+      {/* Hero — premise */}
+      <section className="container-prose py-24 md:py-32">
+        <p className="eyebrow">The Clinical Executives™ · Strategy &amp; Leadership</p>
+        <h1 className="mt-8 max-w-5xl font-serif text-4xl leading-[1.05] tracking-tight text-primary md:text-7xl">
+          Physicians should not have to choose between providing healthcare and leading healthcare.
+        </h1>
+        <span className="rule-gold my-10" />
+        <p className="max-w-3xl text-lg text-muted-foreground md:text-xl">
+          A physician-led leadership platform advancing a new paradigm — <em className="text-foreground/90 not-italic">integration over separation</em> — where physicians are equipped to lead systems while remaining deeply connected to clinical practice, education, research, and discovery.
+        </p>
+        <div className="mt-12 flex flex-wrap items-center gap-4">
+          <Link to="/framework" className="inline-flex h-11 items-center gap-2 rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground hover:bg-primary/90">
+            Explore the Framework <ArrowRight size={16} />
+          </Link>
+          <Link to="/about" className="inline-flex h-11 items-center justify-center rounded-sm border border-primary px-6 text-sm font-medium text-primary hover:bg-primary/5">
+            About the platform
+          </Link>
         </div>
       </section>
 
-      {/* Framework teaser */}
+      {/* Vision & Mission */}
       <section className="border-y border-border bg-secondary/30">
-        <div className="container-prose grid gap-12 py-20 md:grid-cols-12">
+        <div className="container-prose grid gap-16 py-20 md:grid-cols-2">
+          <div>
+            <p className="eyebrow">Vision</p>
+            <span className="rule-gold my-5" />
+            <p className="font-serif text-2xl leading-snug text-primary md:text-3xl">
+              To become the leading national platform redefining physician leadership by integrating clinical excellence, executive strategy, academic medicine, operational innovation, and cross-industry systems learning to advance sustainable, high-performing healthcare organizations.
+            </p>
+          </div>
+          <div>
+            <p className="eyebrow">Mission</p>
+            <span className="rule-gold my-5" />
+            <p className="font-serif text-2xl leading-snug text-primary md:text-3xl">
+              To equip physicians and healthcare organizations with the strategic, operational, and leadership capabilities required to lead complex healthcare systems — ultimately improving care delivery, workforce sustainability, and patient outcomes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Framework teaser — typography-led */}
+      <section className="container-prose py-24 md:py-28">
+        <div className="max-w-3xl">
+          <p className="eyebrow">The Integrated Clinical Executive™ Framework</p>
+          <h2 className="mt-6 font-serif text-3xl leading-tight text-primary md:text-5xl">
+            Four integrations that move a physician from clinician <em className="not-italic text-muted-foreground">or</em> administrator to integrated physician executive.
+          </h2>
+          <span className="rule-gold my-8" />
+        </div>
+        <ol className="mt-12 divide-y divide-border border-y border-border">
+          {integrations.map((i) => (
+            <li key={i.n} className="grid gap-6 py-8 md:grid-cols-12 md:items-baseline">
+              <p className="eyebrow md:col-span-2">{i.n}</p>
+              <div className="md:col-span-4">
+                <h3 className="font-serif text-2xl text-primary md:text-3xl">{i.t}</h3>
+                <p className="mt-2 text-sm italic text-gold">{i.s}</p>
+              </div>
+              <p className="text-muted-foreground md:col-span-6">{i.b}</p>
+            </li>
+          ))}
+        </ol>
+        <div className="mt-10">
+          <Link to="/framework" className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-gold">
+            Read the full framework <ArrowRight size={16} />
+          </Link>
+        </div>
+      </section>
+
+      {/* Strategic rationale */}
+      <section className="border-t border-border bg-secondary/30">
+        <div className="container-prose grid gap-16 py-20 md:grid-cols-12">
           <div className="md:col-span-5">
-            <p className="eyebrow">The Framework</p>
-            <h2 className="mt-4 font-serif text-3xl leading-tight text-primary md:text-4xl">
-              Four disciplines, integrated.
+            <p className="eyebrow">Strategic Rationale</p>
+            <h2 className="mt-6 font-serif text-3xl leading-tight text-primary md:text-4xl">
+              Healthcare systems are undergoing unprecedented transformation.
             </h2>
             <span className="rule-gold my-6" />
             <p className="text-muted-foreground">
-              The Integrated Clinical Executive Framework synthesizes clinical rigor, strategic foresight, human leadership, and systemic design into a single operating model for healthcare leaders.
+              Healthcare continues to lag many industries in operational design, reliability science, and performance optimization. The imperative is not simply to digitize, but to thoughtfully adapt proven operational principles — while preserving clinical integrity and patient-centered care.
             </p>
-            <Link to="/framework" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-gold">
-              See the model <ArrowRight size={16} />
-            </Link>
           </div>
-          <div className="md:col-span-7">
-            <img src={framework} alt="Concentric circles diagram representing the framework" width={1400} height={1000} loading="lazy" className="w-full" />
-          </div>
+          <ul className="md:col-span-7 md:pl-8">
+            {drivers.map((d, idx) => (
+              <li key={d} className="grid grid-cols-[3rem_1fr] gap-6 border-b border-border py-5 last:border-b-0">
+                <span className="eyebrow pt-1">{String(idx + 1).padStart(2, "0")}</span>
+                <p className="font-serif text-lg text-primary md:text-xl">{d}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      {/* Pillars */}
-      <section className="container-prose py-24">
-        <div className="max-w-2xl">
-          <p className="eyebrow">Why this exists</p>
-          <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
-            Healthcare can't be led with healthcare ideas alone.
-          </h2>
-        </div>
-        <div className="mt-12 grid gap-px bg-border md:grid-cols-2">
-          {pillars.map((p) => (
-            <article key={p.eyebrow} className="bg-background p-8">
-              <p className="eyebrow">{p.eyebrow}</p>
-              <h3 className="mt-3 font-serif text-2xl text-primary">{p.title}</h3>
-              <p className="mt-3 text-sm text-muted-foreground">{p.body}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      {/* CTA band */}
-      <section className="border-t border-border bg-primary text-primary-foreground">
-        <div className="container-prose grid gap-8 py-16 md:grid-cols-2 md:items-center">
-          <h2 className="font-serif text-3xl md:text-4xl">Bring the framework to your team.</h2>
-          <div className="flex flex-wrap gap-3 md:justify-end">
-            <Link to="/services" className="inline-flex h-11 items-center justify-center rounded-sm bg-gold px-6 text-sm font-medium text-gold-foreground hover:opacity-90">
-              Advisory & speaking
-            </Link>
-            <Link to="/contact" className="inline-flex h-11 items-center justify-center rounded-sm border border-primary-foreground/40 px-6 text-sm font-medium hover:bg-primary-foreground/10">
-              Get in touch
-            </Link>
+      {/* Closing positioning + CTA */}
+      <section className="bg-primary text-primary-foreground">
+        <div className="container-prose py-24 md:py-28">
+          <p className="eyebrow" style={{ color: "var(--gold)" }}>A call to redefine the role of the physician in modern healthcare</p>
+          <p className="mt-8 max-w-4xl font-serif text-2xl leading-snug md:text-4xl">
+            The Clinical Executives cultivates physician leaders capable not only of navigating healthcare systems, but of redesigning and advancing them — with both strategic rigor and clinical integrity.
+          </p>
+          <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-end">
+            <div className="max-w-md">
+              <p className="text-sm text-primary-foreground/70">Subscribe for monthly insights on integrated physician leadership.</p>
+              <div className="mt-4">
+                <NewsletterForm source="home-closing" />
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-3 md:justify-end">
+              <Link to="/services" className="inline-flex h-11 items-center justify-center rounded-sm bg-gold px-6 text-sm font-medium text-gold-foreground hover:opacity-90">
+                Speaking &amp; advisory
+              </Link>
+              <Link to="/contact" className="inline-flex h-11 items-center justify-center rounded-sm border border-primary-foreground/40 px-6 text-sm font-medium hover:bg-primary-foreground/10">
+                Get in touch
+              </Link>
+            </div>
           </div>
         </div>
       </section>

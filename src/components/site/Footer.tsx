@@ -6,10 +6,13 @@ export function Footer() {
     <footer className="mt-24 border-t border-border bg-secondary/40">
       <div className="container-prose grid gap-12 py-16 md:grid-cols-3">
         <div>
-          <p className="eyebrow">Integrated Clinical Executive</p>
+          <p className="eyebrow">The Clinical Executives</p>
           <h3 className="mt-3 font-serif text-2xl text-primary">
-            A resource for healthcare leaders learning across disciplines.
+            Physicians should not have to choose between providing healthcare and leading healthcare.
           </h3>
+          <p className="mt-3 text-sm text-muted-foreground">
+            A physician-led platform founded by Anita Afzali, MD, MPH, MHCM.
+          </p>
         </div>
         <div>
           <p className="eyebrow">Explore</p>
@@ -24,7 +27,7 @@ export function Footer() {
         <div>
           <p className="eyebrow">Stay informed</p>
           <p className="mt-3 text-sm text-muted-foreground">
-            Cross-disciplinary leadership ideas, delivered monthly.
+            Strategic commentary on integrated physician leadership, delivered monthly.
           </p>
           <div className="mt-4">
             <NewsletterForm source="footer" compact />
@@ -33,8 +36,8 @@ export function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="container-prose flex flex-col items-start justify-between gap-2 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} Integrated Clinical Executive. All rights reserved.</p>
-          <p>Built for clinical executives, healthcare leaders, and physician executives.</p>
+          <p>© {new Date().getFullYear()} The Clinical Executives™. All rights reserved.</p>
+          <p>Integration — not separation — is the future of physician leadership.</p>
         </div>
       </div>
     </footer>

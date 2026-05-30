@@ -1,13 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
 
 const links = [
   { to: "/framework", label: "Framework" },
+  { to: "/about", label: "About" },
   { to: "/insights", label: "Insights" },
   { to: "/services", label: "Services" },
-  { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -16,10 +15,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
       <div className="container-prose flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-3" aria-label="Integrated Clinical Executive home">
-          <img src={logo} alt="" className="h-9 w-auto" width={36} height={36} />
-          <span className="hidden font-serif text-lg tracking-tight text-primary sm:inline">
-            Integrated Clinical Executive
+        <Link to="/" className="flex items-baseline gap-2" aria-label="The Clinical Executives — home">
+          <span className="font-serif text-lg tracking-tight text-primary sm:text-xl">
+            The Clinical Executives
+          </span>
+          <span className="hidden text-[10px] uppercase tracking-[0.18em] text-gold sm:inline">
+            Strategy &amp; Leadership
           </span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
