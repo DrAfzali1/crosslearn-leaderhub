@@ -41,14 +41,25 @@ function ServicesPage() {
       </section>
       <section className="container-prose pb-24">
         <div className="grid gap-px bg-border md:grid-cols-2">
-          {services.map((s, i) => (
+          {services.slice(0, 2).map((s, i) => (
             <article key={s.t} className="bg-background p-8 md:p-10">
               <p className="eyebrow">{String(i + 1).padStart(2, "0")}</p>
               <h2 className="mt-3 font-serif text-2xl text-primary">{s.t}</h2>
               <p className="mt-4 text-muted-foreground">{s.b}</p>
             </article>
           ))}
-          <figure className="bg-background">
+          <div className="bg-background md:col-start-1 md:row-span-3">
+            <div className="grid gap-px bg-border">
+              {services.slice(2).map((s, i) => (
+                <article key={s.t} className="bg-background p-8 md:p-10">
+                  <p className="eyebrow">{String(i + 3).padStart(2, "0")}</p>
+                  <h2 className="mt-3 font-serif text-2xl text-primary">{s.t}</h2>
+                  <p className="mt-4 text-muted-foreground">{s.b}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+          <figure className="bg-background md:col-start-2 md:row-span-3 md:row-start-2">
             <img
               src={podcastImg}
               alt="Polished podcast studio with microphone on a wood desk"
