@@ -54,7 +54,7 @@ function AboutPage() {
         <div className="container-prose grid items-stretch gap-12 py-20 md:grid-cols-12">
           <div className="flex flex-col md:col-span-4">
             <p className="eyebrow">Founder</p>
-            <h2 className="mt-4 font-serif text-3xl leading-tight text-primary md:text-4xl">
+            <h2 className="mt-4 whitespace-nowrap font-serif text-3xl leading-tight text-primary md:text-4xl">
               Anita Afzali, MD, MPH, MHCM
             </h2>
             <span className="rule-gold my-6" />
