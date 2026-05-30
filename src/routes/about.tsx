@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import deskImg from "@/assets/exec-desk.jpg";
 
 const TITLE = "About — The Clinical Executives";
 const DESC =
@@ -57,6 +58,16 @@ function AboutPage() {
               Anita Afzali, MD, MPH, MHCM
             </h2>
             <span className="rule-gold my-6" />
+            <figure className="mt-8 overflow-hidden rounded-sm border border-border/60 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)]">
+              <img
+                src={deskImg}
+                alt="Executive hands resting on a leather portfolio with a fountain pen"
+                width={1400}
+                height={1600}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </figure>
           </div>
           <div className="space-y-5 text-muted-foreground md:col-span-8">
             <p className="text-lg">

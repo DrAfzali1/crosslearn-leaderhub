@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { NewsletterForm } from "@/components/site/NewsletterForm";
+import boardroomImg from "@/assets/exec-boardroom.jpg";
+import atriumImg from "@/assets/exec-atrium.jpg";
 
 const TITLE = "The Clinical Executives — Strategy & Leadership";
 const DESC =
@@ -39,21 +41,36 @@ function Home() {
     <>
       {/* Hero — premise */}
       <section className="container-prose py-24 md:py-32">
-        <p className="eyebrow">The Clinical Executives™ · Strategy &amp; Leadership</p>
-        <h1 className="mt-8 max-w-5xl font-serif text-4xl leading-[1.05] tracking-tight text-primary md:text-7xl">
-          Physicians should not have to choose between providing healthcare and leading healthcare.
-        </h1>
-        <span className="rule-gold my-10" />
-        <p className="max-w-3xl text-lg text-muted-foreground md:text-xl">
-          A physician-led leadership platform advancing a new paradigm — <em className="text-foreground/90 not-italic">integration over separation</em> — where physicians are equipped to lead systems while remaining deeply connected to clinical practice, education, research, and discovery.
-        </p>
-        <div className="mt-12 flex flex-wrap items-center gap-4">
-          <Link to="/framework" className="inline-flex h-11 items-center gap-2 rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground hover:bg-primary/90">
-            Explore the Framework <ArrowRight size={16} />
-          </Link>
-          <Link to="/about" className="inline-flex h-11 items-center justify-center rounded-sm border border-primary px-6 text-sm font-medium text-primary hover:bg-primary/5">
-            About the platform
-          </Link>
+        <div className="grid gap-12 md:grid-cols-12 md:items-center">
+          <div className="md:col-span-7">
+            <p className="eyebrow">The Clinical Executives™ · Strategy &amp; Leadership</p>
+            <h1 className="mt-8 font-serif text-4xl leading-[1.05] tracking-tight text-primary md:text-6xl">
+              Physicians should not have to choose between providing healthcare and leading healthcare.
+            </h1>
+            <span className="rule-gold my-10" />
+            <p className="max-w-2xl text-lg text-muted-foreground md:text-xl">
+              A physician-led leadership platform advancing a new paradigm — <em className="text-foreground/90 not-italic">integration over separation</em> — where physicians are equipped to lead systems while remaining deeply connected to clinical practice, education, research, and discovery.
+            </p>
+            <div className="mt-12 flex flex-wrap items-center gap-4">
+              <Link to="/framework" className="inline-flex h-11 items-center gap-2 rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground hover:bg-primary/90">
+                Explore the Framework <ArrowRight size={16} />
+              </Link>
+              <Link to="/about" className="inline-flex h-11 items-center justify-center rounded-sm border border-primary px-6 text-sm font-medium text-primary hover:bg-primary/5">
+                About the platform
+              </Link>
+            </div>
+          </div>
+          <figure className="md:col-span-5">
+            <div className="overflow-hidden rounded-sm border border-border/60 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)]">
+              <img
+                src={boardroomImg}
+                alt="Quiet executive boardroom at dusk overlooking a city skyline"
+                width={1600}
+                height={1100}
+                className="h-full w-full object-cover grayscale-[15%]"
+              />
+            </div>
+          </figure>
         </div>
       </section>
 
@@ -117,6 +134,16 @@ function Home() {
             <p className="text-muted-foreground">
               Healthcare continues to lag many industries in operational design, reliability science, and performance optimization. The imperative is not simply to digitize, but to thoughtfully adapt proven operational principles — while preserving clinical integrity and patient-centered care.
             </p>
+            <figure className="mt-10 overflow-hidden rounded-sm border border-border/60">
+              <img
+                src={atriumImg}
+                alt="Sunlit modern hospital atrium with clean architectural lines"
+                width={1600}
+                height={1100}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </figure>
           </div>
           <ul className="md:col-span-7 md:pl-8">
             {drivers.map((d, idx) => (
