@@ -14,9 +14,6 @@ export function Footer() {
           <h3 className="mt-4 font-serif text-2xl text-primary">
             Physicians should not have to choose between providing healthcare and leading healthcare.
           </h3>
-          <p className="mt-3 text-sm text-muted-foreground">
-            A physician-led platform founded by Anita Afzali, MD, MPH, MHCM.
-          </p>
         </div>
         <div>
           <p className="eyebrow">Explore</p>
