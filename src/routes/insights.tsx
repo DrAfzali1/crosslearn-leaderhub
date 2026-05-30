@@ -2,8 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
 import { listInsights } from "@/lib/insights.functions";
 
-const TITLE = "Insights — Integrated Clinical Executive";
-const DESC = "Essays and case studies on cross-disciplinary leadership for healthcare.";
+const TITLE = "Insights — The Clinical Executives";
+const DESC = "Curated discussions, executive interviews, and strategic commentary on integrated physician leadership, system-level transformation, and cross-industry operational excellence in healthcare.";
 
 const insightsQO = queryOptions({
   queryKey: ["insights", "list"],
@@ -30,14 +30,19 @@ export const Route = createFileRoute("/insights")({
 function InsightsPage() {
   const { data } = useSuspenseQuery(insightsQO);
   return (
-    <section className="container-prose py-20 md:py-28">
+    <section className="container-prose py-24 md:py-32">
       <p className="eyebrow">Insights</p>
-      <h1 className="mt-6 max-w-3xl font-serif text-4xl leading-tight text-primary md:text-6xl">
-        Essays for the modern clinical executive.
+      <h1 className="mt-8 max-w-4xl font-serif text-4xl leading-[1.05] tracking-tight text-primary md:text-6xl">
+        Strategic commentary on integrated physician leadership.
       </h1>
-      <span className="rule-gold my-8" />
+      <span className="rule-gold my-10" />
+      <p className="max-w-3xl text-lg text-muted-foreground">
+        Curated discussions, executive interviews, and commentary that elevate the conversation from individual leadership development to system-level impact, governance, and transformation.
+      </p>
       {data.insights.length === 0 ? (
-        <p className="text-muted-foreground">New essays publishing soon. Subscribe to be notified.</p>
+        <p className="mt-16 max-w-2xl font-serif text-2xl leading-snug text-primary md:text-3xl">
+          New insights publishing soon. <Link to="/subscribe" className="underline decoration-gold underline-offset-4 hover:text-gold">Subscribe</Link> to be the first to read them.
+        </p>
       ) : (
         <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
           {data.insights.map((i) => (
